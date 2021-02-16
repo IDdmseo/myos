@@ -45,7 +45,8 @@ static void printf_test(void)
 static void timer_test(void)
 {
 	while(true){
-		dprintf("current count: %u\n", hal_timer_get_1ms_counter());
+		dprintf("current count: %u\n", hal_timer_get_1ms_counter() / 1000);
+		delay(1000);
 	}
 
 }
